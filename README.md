@@ -6,7 +6,7 @@ Edit 1-5-2022: Further documentation pending!
 
 ### io.py
 
-Class CIF_CAR_ASE is used for converting CIF and Vasp (CONTCAR, POSCAR) files to the ASE atoms object representation.  It is typically used as follows, after importing a file in need of conversion.
+**Class CIF_CAR_ASE** Used for converting CIF and Vasp (CONTCAR, POSCAR) files to the ASE atoms object representation.  It is typically used as follows, after importing a file in need of conversion.
 
 > extracted_CIF = CIF_CAR_ASE(file_path, "FILE_EXTENSION")<br>ASE_Extracted = extracted_CIF.convert(False)
 
