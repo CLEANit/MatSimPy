@@ -48,7 +48,7 @@ def can_opener(filename):
 class CIF_CAR_ASE:
 
   if version.parse(ase.__version__) > version.parse("3.17"):
-    continue
+    pass
   else:
     raise VersionError(ase.__version__)
 
