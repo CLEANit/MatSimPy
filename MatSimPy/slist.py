@@ -104,7 +104,7 @@ def Chopper(big_list, cpus):
 # Finds the minimum index/indices of a 2D matrix x
 # Options for multiple minima, symmetric matrices, and 1D matrices are present
 # Does not account for multiple identical minima, each will be returned individually
-#https://stackoverflow.com/questions/30180241/numpy-get-the-column-and-row-index-of-the-minimum-value-of-a-2d-array
+# Adapted using https://stackoverflow.com/questions/30180241/numpy-get-the-column-and-row-index-of-the-minimum-value-of-a-2d-array
 def find_min_idx(x, n_low = 1, sym = False, two_D = True):
     """
     Parameters:
