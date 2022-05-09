@@ -1,5 +1,6 @@
 import pickle
 from packaging import version
+import ase
 from ase.io.cif import parse_cif_ase
 from ase.io.vasp import read_vasp
 from ase.visualize import view
