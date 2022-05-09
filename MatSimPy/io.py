@@ -13,7 +13,7 @@ class VersionError(Exception):
         message -- explanation of the error
     """
 
-    def __init__(self, version, message= "ASE version " + version + " is not > 3.17"):
+    def __init__(self, version, message= "ASE version is not > 3.17"):
         self.version = version
         self.message = message
         super().__init__(self.message)
