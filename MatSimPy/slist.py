@@ -10,7 +10,7 @@ def pyargmax(l):
 
 
 # Adapted from https://stackoverflow.com/questions/14008440/how-to-extract-numbers-from-filename-in-python
-def Trim_nums(string_name, num_pos = 0):
+def trim_nums(string_name, num_pos = 0):
     """
     Parameters:
     * string_name (string): a filename string
