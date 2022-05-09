@@ -18,6 +18,6 @@ File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feedin
 
 ### slist.py    -->    String and List
 
-**Trim_nums(string_name, num_pos = 0)** <br> This allows integer values to be picked out from filenames (i.e. "\home\file_1.txt" would return [1]).  A specified integer value is used to return an integer found in the filename (i.e.  "\home\file_1_2.txt" would return [1] by default, but would return [2] if num_pos = 1).
+**Func trim_nums(string_name, num_pos = 0)** <br> This allows integer values to be picked out from filenames (i.e. "\home\file_1.txt" would return [1]).  A specified integer value is used to return an integer found in the filename (i.e.  "\home\file_1_2.txt" would return [1] by default, but would return [2] if num_pos = 1).
 
 **Func pyargmax(l)** <br> Use this to find the argmax in a python list of numbers.  This is from the resource here: https://towardsdatascience.com/there-is-no-argmax-function-for-python-list-cd0659b05e49
