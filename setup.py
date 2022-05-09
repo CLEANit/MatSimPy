@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='Materials Science Simulation tools for Python',
+    name='Materials Science Simulation Tools for Python',
     url='https://github.com/CLEANit/MatSimPy',
     author='Christoff Reimer',
     author_email='Christoff.Reimer@uottawa.ca',
