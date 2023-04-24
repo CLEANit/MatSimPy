@@ -31,7 +31,7 @@ def Slab_composition_identifier(Atoms_object):
 
 
 # Produces a list of indices matching an atom symbol
-# Originally written by Yuxin Chang, UofT, Ted Sargent Group.  I claim no ownership of this function
+# Originally written by Yuxin Chang, UofT, Ted Sargent Group.  I claim no authorship of this function
 def get_indices(atoms, symbol):
     """
     Parameters:
