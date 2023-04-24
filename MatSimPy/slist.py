@@ -1,6 +1,7 @@
 import re
 from copy import deepcopy
 import numpy as np
+from itertools import combinations_with_replacement
 
 
 # Taken directly from https://towardsdatascience.com/there-is-no-argmax-function-for-python-list-cd0659b05e49
@@ -132,3 +133,42 @@ def find_min_idx(x, n_low = 1, sym = False, two_D = True):
             minima.append(y.argmin())
             y[minima[i]] = np.inf
     return minima
+
+  
+# define Python user-defined exceptions
+class InvalidOutputException(Exception):
+    "Raised when output format is not an approved data type"
+    pass
+
+# Generates a list/array of all possible compositions (irrespective of order, with replacement) for a list of classes/categories of a given length
+def comp_list(string_classes, num_per, list_form = False, out_form = "int"):
+  """
+  Parameters:
+  * string_classes (String): The classes of items available, in terms of 1 index iterables, i.e. "ABCD", "1234" 
+  * num_per (int): A POSITIVE integer value for the number of items allowed in each state
+  * list_form (bool: A switch to decide if output a nested list or np array, default False (np)
+  * out_form (str): Determines if output is "int" or "str" formatted, default "int"
+  Returns: 
+  * out (nested list or np array: All possible compositions under the input conditions
+  """
+
+  combos = combinations_with_replacement(string_classes, num_per)
+  out = []
+  try:
+    if out_form == "int":
+      for i in combos:
+        out.append(list(map(int, list(i))))
+    elif out_form == "str":
+      for i in combos:
+        out.append(list(map(str, list(i))))
+    else:
+      raise InvalidOutputException
+
+  except InvalidOutputException:
+      print("Exception occurred: Invalid out_form data type")   
+
+  # Output in np array form or nested list as per user input
+  if list_form:
+    return out
+  else:
+    return np.array(out)
