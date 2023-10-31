@@ -21,7 +21,7 @@ def init_graph_from_atm(atm):
 
 # Adapted from: https://stackoverflow.com/questions/54440779/how-to-find-all-connected-subgraph-of-a-graph-in-networkx
 # This func takes in a graph and returns every CONNECTED subgraph it has
-def C_Subgraph_finder(Graf):
+def c_subgraph_finder(Graf):
     """
     Parameters:
     * graf (nx graph): The input graph
@@ -64,7 +64,6 @@ def graph_visual(Gin, cdict, label_string = "Type", printout = False, font = [22
     Returns: 
     * None
     """
-    
     # Get type labels from the graph input
     labels = [Gin.nodes[i][label_string] for i in Gin.nodes]
     clabels = [cdict[i] for i in labels]
@@ -78,3 +77,21 @@ def graph_visual(Gin, cdict, label_string = "Type", printout = False, font = [22
     plt.axis("off")
     plt.show()
     return None
+
+def Gdegree(G):
+    """
+    Obtains an array counting degrees of nodes present in graph G
+    Parameters:
+    * G (nx graph): Input graph 
+    Returns:
+    * G_count (np array): An array indicating the number of nodes with i edges in G, where i is the index of G_count
+    """
+    G_degree = []
+    # Degree values for an unknown graph could range from 0 to n, where n is the number of nodes in the graph
+    G_count = np.zeros((1,len(G)+1))
+    for n in list(G.nodes()):
+        G_degree.append(G.degree[n])
+    # This covers connection possibilities
+    for r in range(len(G)+1):
+        G_count[0][r] += (G_degree.count(r))
+    return G_count
