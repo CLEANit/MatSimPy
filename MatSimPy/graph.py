@@ -1,31 +1,27 @@
-import networkx as nx
+import matplotlib.pyplot as plt
 from collections import Counter
+import networkx as nx
+import numpy as np
 import itertools
 
-def init_graph(atm):
+def init_graph_from_atm(atm):
     """
+    Initializes an unconnected, undirected graph from an ASE atoms object
     Parameters:
     * atm (ASE atoms object): The input molecule
     Returns: 
     * g (nx graph object): An unconnected graph made up of the atoms in our molecule, with attributes for the number and symbol of the element for each node
     """
-
     #Creates a blank graph with no nodes
     g = nx.Graph()
-
-    #Adds the nodes from slab we made earlier (considering slab is an Atoms object the nodes are the atoms in the slab)
+    #Adds nodes from atms object
     for atom in atm:
         g.add_node(atom.index, number = atom.number, element = atom.symbol)
-
-    #Get the node labels that we just set up a moment ago
-    #node_labels = nx.get_node_attributes(g,'number')
-
     return g
 
 # Adapted from: https://stackoverflow.com/questions/54440779/how-to-find-all-connected-subgraph-of-a-graph-in-networkx
 # This func takes in a graph and returns every CONNECTED subgraph it has
 def C_Subgraph_finder(Graf):
-
     """
     Parameters:
     * graf (nx graph): The input graph
@@ -55,3 +51,30 @@ def C_Subgraph_finder(Graf):
             subgraphs[i].pop(subgraphs[i].index(k))
 
     return subgraphs
+    
+def graph_visual(Gin, cdict, label_string = "Type", printout = False, font = [22, "black"]):
+    """
+    Creates a convenient visualization of the input graph for the feature classes and colours present in cdict
+    Parameters:
+    * Gin (nx graph): An input graph, with labelled nodes
+    * cdict (ditc): A dict object containing int-colour combinations for each label type (i.e. {1 : "Red", 2: "Blue"})
+    * label_string (str): A str object used to pick the visualized label type, default is "Type" 
+    * printout (bool): A bool object that determines if the colour-coding is printed to the user, default is False
+    * font (list): A list that contains the font size (int) and the font colour (str) of the user's choice, default is [22, "black"]
+    Returns: 
+    * None
+    """
+    
+    # Get type labels from the graph input
+    labels = [Gin.nodes[i][label_string] for i in Gin.nodes]
+    clabels = [cdict[i] for i in labels]
+    if printout:
+        print("Showing graph colours, types, and labels")
+        print([(c, l, g) for c, l, g in zip(clabels, labels, Gin.nodes)])
+    pos = nx.spring_layout(Gin, seed=117)  # positions for all nodes
+    nx.draw_networkx_edges(Gin, pos, width=1.0, alpha=0.5)
+    nx.draw_networkx(Gin, pos, node_color = clabels, node_size = 750, with_labels = True, font_size=font[0], font_color=font[1])
+    plt.tight_layout()
+    plt.axis("off")
+    plt.show()
+    return None
