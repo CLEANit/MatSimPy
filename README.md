@@ -1,6 +1,6 @@
-This repo stores Python functions and classes that help with materials science work.  Particularly for ASE and Networkx, but also with VASP and (Work-in-Progress) OVITO.
+This repo stores Python functions and classes that help with materials science work.  Particularly for ASE and Networkx, but also with VASP and (WIP) OVITO.
 
-Edit 9-5-2022: io.py has now been documented below.  Further documentation pending!
+Edit 31-10-2023: graph.py has now been documented below.  Further documentation pending.
 
 ## Documentation:
 
@@ -21,3 +21,13 @@ File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feedin
 **Func trim_nums(string_name, num_pos = 0)** <br> This allows integer values to be picked out from filenames (i.e. "\home\file_1.txt" would return [1]).  A specified integer value is used to return an integer found in the filename (i.e.  "\home\file_1_2.txt" would return [1] by default, but would return [2] if num_pos = 1).
 
 **Func pyargmax(l)** <br> Use this to find the argmax in a python list of numbers.  This is from the resource here: https://towardsdatascience.com/there-is-no-argmax-function-for-python-list-cd0659b05e49
+
+### graph.py    -->    Graph methods
+
+**Func init_graph_from_atm** <br> Initializes an unconnected, undirected graph from a provided ASE atoms object.
+
+**Func c_subgraph_finder** <br> Takes a graph and returns every connected subgraph it has.
+
+**Func graph_visual** <br> Produces a labelled matplotlib visualization of a nx graph object.
+
+**Func gdegree** <br> Obtains an array counting degrees of nodes present in graph G.
