@@ -29,7 +29,6 @@ def composition_identifier(Atoms_object):
     num_list = uniques(entries[1])
     return [elem_list, num_list]  
 
-
 # Produces a list of indices matching an atom symbol
 # Originally written by Yuxin Chang, UofT, Ted Sargent Group.  I claim no authorship of this function
 def get_indices(atoms, symbol):
