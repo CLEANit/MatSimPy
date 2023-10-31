@@ -1,4 +1,4 @@
-This repo stores Python functions and classes that help with materials science work.  Particularly for ASE and Networkx, but also with VASP and (WIP) OVITO.
+This repo stores Python functions and classes that help materials science tasks with simulations.  Particularly for ASE and Networkx, but also with VASP and (WIP) OVITO.
 
 Edit 31-10-2023: graph.py has now been documented below.  Further documentation pending.
 
