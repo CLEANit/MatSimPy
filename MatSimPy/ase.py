@@ -15,8 +15,8 @@ def vacuum_adjust(ASE_Extracted, remove_vac):
     ASE_Extracted.center()
     return ASE_Extracted  
   
-# Defines the composition of the slab in a paired list output for chemical numbers and symbols
-def Slab_composition_identifier(Atoms_object):
+# Defines the composition of an ASE atoms object in a paired list output for chemical numbers and symbols
+def composition_identifier(Atoms_object):
     """
     Parameters:
     * Atoms_object (ASE atoms object): The molecule/atom to be analyzed
