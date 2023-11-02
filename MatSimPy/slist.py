@@ -1,14 +1,33 @@
 import re
 from copy import deepcopy
 import numpy as np
-from itertools import combinations_with_replacement
+import itertools as it
 
+def repeatedDataSampler(inList, reps, maxReps):
+  """
+  Takes a list containing len(inList)/maxReps unique elements in order (i.e. [A, A, A, B, B, B...) and samples reps repeats from each unique entry
+  Parameters:
+  * string_name (string): a filename string
+  * num_pos (int): The index of the # the user wants from the filename, if all #'s were in a list (optional, default is 0)
+  Returns:
+  * num_list[num_pos]: The extracted # from the num_list pulled from the filename 
+  """
+  print("Input list has length {} and contains {} repeats per entry".format(len(inList), maxReps))
+  if reps > maxReps:
+    print("reps > maxReps will lead to an array out of bounds exception. Returning None")
+    return None
+  elif reps == maxReps:
+    print("reps = maxReps. Returning original inList")
+    return inList
+  else:
+    output = [inList[i:i+reps] for i in range(0, len(inList), maxReps)]
+    output = list(it.chain.from_iterable(output))
+    return output
 
 # Taken directly from https://towardsdatascience.com/there-is-no-argmax-function-for-python-list-cd0659b05e49
 def pyargmax(l):
   f = lambda i: l[i]
   return max(range(len(l)), key=f)
-
 
 # Adapted from https://stackoverflow.com/questions/14008440/how-to-extract-numbers-from-filename-in-python
 def trim_nums(string_name, num_pos = 0):
@@ -152,7 +171,7 @@ def comp_list(string_classes, num_per, list_form = False, out_form = "int"):
   * out (nested list or np array: All possible compositions under the input conditions
   """
 
-  combos = combinations_with_replacement(string_classes, num_per)
+  combos = it.combinations_with_replacement(string_classes, num_per)
   out = []
   try:
     if out_form == "int":
