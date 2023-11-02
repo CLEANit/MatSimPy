@@ -5,12 +5,13 @@ import itertools as it
 
 def repeatedDataSampler(inList, reps, maxReps):
   """
-  Takes a list containing len(inList)/maxReps unique elements in order (i.e. [A, A, A, B, B, B...) and samples reps repeats from each unique entry
+  Takes a list containing len(inList)/maxReps ordered categories and subsamples reps entries from each group (Ex. For trivial case of repeated letters, [A, A, A, B, B, B...] --> [A, B...])
   Parameters:
-  * string_name (string): a filename string
-  * num_pos (int): The index of the # the user wants from the filename, if all #'s were in a list (optional, default is 0)
+  * inList (list): A list object to pull a subset from
+  * reps (int): The number of entries to extract from each sub-category in inList
+  * maxReps (int): The total number of entries in each sub-category in the input list
   Returns:
-  * num_list[num_pos]: The extracted # from the num_list pulled from the filename 
+  * output: The extracted subsampled list of repeats
   """
   print("Input list has length {} and contains {} repeats per entry".format(len(inList), maxReps))
   if reps > maxReps:
