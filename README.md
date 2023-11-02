@@ -22,6 +22,8 @@ File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feedin
 
 **Func pyargmax(l)** <br> Find the argmax in a python list of numbers.  From the resource here: https://towardsdatascience.com/there-is-no-argmax-function-for-python-list-cd0659b05e49
 
+**Func repeatDataSampler** <br> Pull a user-defined number of repeated samples from a list of consistent ordered repeats (i.e. A,A,B,B,C,C... --> A, B, C...).
+
 ### graph.py    -->    Graph methods
 
 **Func init_graph_from_atm** <br> Initializes an unconnected, undirected graph from a provided ASE atoms object.
