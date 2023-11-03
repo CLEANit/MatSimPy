@@ -3,6 +3,19 @@ from copy import deepcopy
 import numpy as np
 import itertools as it
 
+# Adapted from https://stackoverflow.com/questions/497426/deleting-multiple-elements-from-a-list
+def strainer(someList, indices):
+  """
+  Takes list and extracts a sub-list containing only entries found in index list
+  Parameters:
+  * someList (list): A list object to pull a subset from
+  * indices (list): The indices of someList to keep
+  Returns:
+  * strainedList (list): someList subsampled by indices provided
+  """
+  strainedList = [i for j, i in enumerate(someList) if j not in indices]
+  return strainedList
+
 def repeatedDataSampler(inList, reps, maxReps):
   """
   Takes a list containing len(inList)/maxReps ordered categories and subsamples reps entries from each group (Ex. For trivial case of repeated letters, [A, A, A, B, B, B...] --> [A, B...])
@@ -11,7 +24,7 @@ def repeatedDataSampler(inList, reps, maxReps):
   * reps (int): The number of entries to extract from each sub-category in inList
   * maxReps (int): The total number of entries in each sub-category in the input list
   Returns:
-  * output: The extracted subsampled list of repeats
+  * output (list): The extracted subsampled list of repeats
   """
   print("Input list has length {} and contains {} repeats per entry".format(len(inList), maxReps))
   if reps > maxReps:
