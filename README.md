@@ -20,7 +20,9 @@ File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feedin
 
 **Func trim_nums(string_name, num_pos = 0)** <br> This allows integer values to be picked out from filenames (i.e. "\home\file_1.txt" would return [1]).  A specified integer value is used to return an integer found in the filename (i.e.  "\home\file_1_2.txt" would return [1] by default, but would return [2] if num_pos = 1).
 
-**Func pyargmax(l)** <br> Find the argmax in a python list of numbers.  From the resource here: https://towardsdatascience.com/there-is-no-argmax-function-for-python-list-cd0659b05e49
+**Func pyargmax(l)** <br> Find the argmax in a python list of numbers.  Adapted from resource here: https://towardsdatascience.com/there-is-no-argmax-function-for-python-list-cd0659b05e49
+
+**Func strainer(someList, indices)** <br> Takes someList and extracts a sub-list containing only entries found in the indices list. Useful for working with lists of objects that cannot simply be converted to numpy arrays or pandas dataframes.  Adapted from resource here: https://stackoverflow.com/questions/497426/deleting-multiple-elements-from-a-list
 
 **Func repeatDataSampler** <br> Pull a user-defined number of samples from a list of consistently-sized ordered categories/repeats (i.e. name1, name2, name3, grade1, grade2, grade3... --> name1, grade1...).
 
