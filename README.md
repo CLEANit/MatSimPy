@@ -35,7 +35,7 @@ File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feedin
 
 **Func graph_visual** <br> Produces a labelled matplotlib visualization of a nx graph object.
 
-**Func gdegree** <br> Obtains an array counting degrees of nodes present in graph G. Similar to, but distinct from, G.degree already present in the nx package.
+**Func gdegree** <br> Obtains an array counting degrees of nodes present in graph G. Similar but distinct from the G.degree already present in the nx package.
 
 ### ase.py    -->    ASE methods
 
