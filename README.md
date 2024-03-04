@@ -1,6 +1,6 @@
 This repo stores Python functions and classes that help materials science tasks with simulations.  Particularly for ASE and Networkx, but also with VASP and (WIP) OVITO.  A number of these tools were found online and credit is given where possible.  If there are any items lacking suitable accreditation please let me know and I will correct them at once.
 
-Edit 31-10-2023: graph.py has now been documented below.  Further documentation pending.
+Edit 04-03-2024: Accreditations updated.  Further documentation pending.
 
 ## Documentation:
 
