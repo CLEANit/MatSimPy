@@ -13,8 +13,10 @@ Edit 04-03-2024: Accreditations updated.  Further documentation pending.
 File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feeding .convert 'True' will result in an attempt by ASE to create a visualization of the converted atoms object.  Please note that at this time, only the default view mode is implemented and it will not run in Google Colab as of last check.
 
 **Func pickle_factory** <br> Creates a pickle file when given a file path (and name) string and a list object containing the information to be pickled.
+> pickle_factory("path/to/your/dir/file.pkl", yourData)
 
 **Func can_opener** <br> Unpickles pickle files when provided a file path to a valid pickle file.
+> importData = can_opener("path/to/your/dir/file.pkl")
 
 ### slist.py    -->    String and List
 
