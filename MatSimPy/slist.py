@@ -5,43 +5,43 @@ import itertools as it
 
 # Adapted from https://stackoverflow.com/questions/497426/deleting-multiple-elements-from-a-list
 def strainer(someList, indices):
-	"""
- 	Takes list and extracts a sub-list containing only entries found in index list
- 	Parameters:
- 	* someList (list): A list object to pull a subset from
- 	* indices (list): The indices of someList to keep
- 	Returns:
- 	* strainedList (list): someList subsampled by indices provided
-	"""
-	strainedList = [i for j, i in enumerate(someList) if j not in indices]
-	return strainedList
+    """
+    Takes list and extracts a sub-list containing only entries found in index list
+    Parameters:
+    * someList (list): A list object to pull a subset from
+    * indices (list): The indices of someList to keep
+    Returns:
+    * strainedList (list): someList subsampled by indices provided
+    """
+    strainedList = [i for j, i in enumerate(someList) if j not in indices]
+    return strainedList
 
 def repeatedDataSampler(inList, reps, maxReps):
-	"""
-	Takes a list containing len(inList)/maxReps ordered categories and subsamples reps entries from each group (Ex. For trivial case of repeated letters, [A, A, A, B, B, B...] --> [A, B...])
-	Parameters:
-	* inList (list): A list object to pull a subset from
-	* reps (int): The number of entries to extract from each sub-category in inList
-	* maxReps (int): The total number of entries in each sub-category in the input list
-	Returns:
-	* output (list): The extracted subsampled list of repeats
-	"""
-	print("Input list has length {} and contains {} repeats per entry".format(len(inList), maxReps))
-	if reps > maxReps:
-		print("reps > maxReps will lead to an array out of bounds exception. Returning None")
-		return None
-	elif reps == maxReps:
-		print("reps = maxReps. Returning original inList")
-		return inList
-	else:
-		output = [inList[i:i+reps] for i in range(0, len(inList), maxReps)]
-		output = list(it.chain.from_iterable(output))
-		return output
+    """
+    Takes a list containing len(inList)/maxReps ordered categories and subsamples reps entries from each group (Ex. For trivial case of repeated letters, [A, A, A, B, B, B...] --> [A, B...])
+    Parameters:
+    * inList (list): A list object to pull a subset from
+    * reps (int): The number of entries to extract from each sub-category in inList
+    * maxReps (int): The total number of entries in each sub-category in the input list
+    Returns:
+    * output (list): The extracted subsampled list of repeats
+    """
+    print("Input list has length {} and contains {} repeats per entry".format(len(inList), maxReps))
+    if reps > maxReps:
+        print("reps > maxReps will lead to an array out of bounds exception. Returning None")
+        return None
+    elif reps == maxReps:
+        print("reps = maxReps. Returning original inList")
+        return inList
+    else:
+        output = [inList[i:i+reps] for i in range(0, len(inList), maxReps)]
+        output = list(it.chain.from_iterable(output))
+        return output
 
 # Taken directly from https://towardsdatascience.com/there-is-no-argmax-function-for-python-list-cd0659b05e49
 def pyargmax(l):
-	f = lambda i: l[i]
-	return max(range(len(l)), key=f)
+    f = lambda i: l[i]
+    return max(range(len(l)), key=f)
 
 # Adapted from https://stackoverflow.com/questions/14008440/how-to-extract-numbers-from-filename-in-python
 def trim_nums(string_name, num_pos = 0):
@@ -182,76 +182,76 @@ class InputMismatchException(Exception):
 
 # Generates a list/array of all possible compositions (irrespective of order, with replacement) for a list of classes/categories of a given length
 def comp_list(string_classes, num_per, list_form = False, out_form = "int"):
-  """
-  Parameters:
-  * string_classes (String): The classes of items available, in terms of 1 index iterables, i.e. "ABCD", "1234" 
-  * num_per (int): A POSITIVE integer value for the number of items allowed in each state
-  * list_form (bool: A switch to decide if output a nested list or np array, default False (np)
-  * out_form (str): Determines if output is "int" or "str" formatted, default "int"
-  Returns: 
-  * out (nested list or np array: All possible compositions under the input conditions
-  """
+    """
+    Parameters:
+    * string_classes (String): The classes of items available, in terms of 1 index iterables, i.e. "ABCD", "1234" 
+    * num_per (int): A POSITIVE integer value for the number of items allowed in each state
+    * list_form (bool: A switch to decide if output a nested list or np array, default False (np)
+    * out_form (str): Determines if output is "int" or "str" formatted, default "int"
+    Returns: 
+    * out (nested list or np array: All possible compositions under the input conditions
+    """
 
-  combos = it.combinations_with_replacement(string_classes, num_per)
-  out = []
-  try:
-    if out_form == "int":
-      for i in combos:
-        out.append(list(map(int, list(i))))
-    elif out_form == "str":
-      for i in combos:
-        out.append(list(map(str, list(i))))
-    else:
-      raise InvalidOutputException
+    combos = it.combinations_with_replacement(string_classes, num_per)
+    out = []
+    try:
+        if out_form == "int":
+            for i in combos:
+                out.append(list(map(int, list(i))))
+        elif out_form == "str":
+            for i in combos:
+                out.append(list(map(str, list(i))))
+        else:
+            raise InvalidOutputException
 
-  except InvalidOutputException:
+    except InvalidOutputException:
       print("Exception occurred: Invalid out_form data type")   
 
-  # Output in np array form or nested list as per user input
-  if list_form:
-    return out
-  else:
-    return np.array(out)
+    # Output in np array form or nested list as per user input
+    if list_form:
+        return out
+    else:
+        return np.array(out)
 
 
 def index_mapper(stateSet, tranSet, uniqueSet):
-	"""
-	Parameters:
-	* stateSet (array): An array containing the unique compositions of each state (row), where each column represents a particular atom type
-	* tranSet (array): An array containing transition type choices corresponding to each state (row) in stateSet
-	* uniqueSet (array): An array containing the composition of each state (row), where each column represents a particular atom type
-	Returns: None
-	* state_mapping (array): An array that maps each state from stateSet to a unique state index from uniqueSet and indicates the transition atom type
-	"""
-	if len(tranSet) == len(stateSet):
-		# Store where each unique state occurs in the dataset
-		ix_list = []
-		#https://stackoverflow.com/questions/18927475/numpy-array-get-row-index-searching-by-a-row
-		for i in uniqueSet:
-			# Check row equalities to get confirmation that state is present and save the index in the unique_states list
-			ix_list.append(np.where(np.all(stateSet==i,axis=1)))
-	
-		state_mapping = np.zeros((len(tranSet), 2), dtype = int)
-		state_mapping[:,0] = [i for i in range(len(tranSet))]
-	
-		for t, i in enumerate(ix_list):
-			# Find the values of the steps that match those found in the idx for a particular unique state
-			# This creates a list of len(i) where each element is a true/false ndarray as long as step_state
-			# Taking the sum reduces the output to a single binary 1D array which has 1s where the entry belongs to state t and zeros where it does not
-			# True false evaluate to zero and 1 with sum, which is exceedingly useful here
-			# Temp becomes a 1D array here with length equal to the number of steps, as expected from checking over step_state
-			temp = sum([state_mapping[:,0] == j for j in i[0]])
-			# Ensure int type to 1/0
-			temp = temp.astype(int)
-			# Pull all locations where the same state shows up
-			temp = np.where(temp == 1)
-			# Put in the unique state index for that state at those indices
-			state_mapping[temp, 1] = t
-	
-		# And we also tack on the stacked next atoms
-		state_mapping = np.append(state_mapping, np.reshape(tranSet, (tranSet.shape[0],1)), axis = 1)
-		return state_mapping
-		
-	else:
-		print("Error: Lengths of next atoms list and state dataset do not match")
-		raise InputMismatchException
+    """
+    Parameters:
+    * stateSet (array): An array containing the unique compositions of each state (row), where each column represents a particular atom type
+    * tranSet (array): An array containing transition type choices corresponding to each state (row) in stateSet
+    * uniqueSet (array): An array containing the composition of each state (row), where each column represents a particular atom type
+    Returns: None
+    * state_mapping (array): An array that maps each state from stateSet to a unique state index from uniqueSet and indicates the transition atom type
+    """
+    if len(tranSet) == len(stateSet):
+        # Store where each unique state occurs in the dataset
+        ix_list = []
+        #https://stackoverflow.com/questions/18927475/numpy-array-get-row-index-searching-by-a-row
+        for i in uniqueSet:
+            # Check row equalities to get confirmation that state is present and save the index in the unique_states list
+            ix_list.append(np.where(np.all(stateSet==i,axis=1)))
+    
+        state_mapping = np.zeros((len(tranSet), 2), dtype = int)
+        state_mapping[:,0] = [i for i in range(len(tranSet))]
+    
+        for t, i in enumerate(ix_list):
+            # Find the values of the steps that match those found in the idx for a particular unique state
+            # This creates a list of len(i) where each element is a true/false ndarray as long as step_state
+            # Taking the sum reduces the output to a single binary 1D array which has 1s where the entry belongs to state t and zeros where it does not
+            # True false evaluate to zero and 1 with sum, which is exceedingly useful here
+            # Temp becomes a 1D array here with length equal to the number of steps, as expected from checking over step_state
+            temp = sum([state_mapping[:,0] == j for j in i[0]])
+            # Ensure int type to 1/0
+            temp = temp.astype(int)
+            # Pull all locations where the same state shows up
+            temp = np.where(temp == 1)
+            # Put in the unique state index for that state at those indices
+            state_mapping[temp, 1] = t
+    
+        # And we also tack on the stacked next atoms
+        state_mapping = np.append(state_mapping, np.reshape(tranSet, (tranSet.shape[0],1)), axis = 1)
+        return state_mapping
+        
+    else:
+        print("Error: Lengths of next atoms list and state dataset do not match")
+        raise InputMismatchException
