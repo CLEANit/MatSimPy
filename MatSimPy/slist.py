@@ -168,10 +168,17 @@ def find_min_idx(x, n_low = 1, sym = False, two_D = True):
     return minima
 
   
-# define Python user-defined exceptions
+# Python user-defined exception
 class InvalidOutputException(Exception):
     "Raised when output format is not an approved data type"
     pass
+
+
+# Python user-defined exception
+class InputMismatchException(Exception):
+    "Raised when input lengths/sizes do not match"
+    pass
+
 
 # Generates a list/array of all possible compositions (irrespective of order, with replacement) for a list of classes/categories of a given length
 def comp_list(string_classes, num_per, list_form = False, out_form = "int"):
@@ -205,3 +212,49 @@ def comp_list(string_classes, num_per, list_form = False, out_form = "int"):
     return out
   else:
     return np.array(out)
+
+
+def index_mapper(stateSet, atomSet, uniqueSet):
+	"""
+	Parameters:
+	* stateSet (array): An array containing the unique compositions of each state (row), where each column represents a particular atom type
+	* atomSet (array): An array containing transition atoms corresponding to each state (row) in stateSet
+  * uniqueSet (array): An array containing the composition of each state (row), where each column represents a particular atom type
+	Returns: None
+  * state_mapping (array): An array that maps each state from stateSet to a unique state index from uniqueSet and indicates the transition atom type
+	"""
+	if len(atomSet) == len(stateSet):
+		# Store where each unique state occurs in the MD dataset
+		ix_list = []
+		#https://stackoverflow.com/questions/18927475/numpy-array-get-row-index-searching-by-a-row
+		for i in uniqueSet:
+			# Check row equalities to get confirmation that state is present and save the index in the unique_states list
+			ix_list.append(np.where(np.all(stateSet==i,axis=1)))
+
+		state_mapping = np.zeros((len(atomSet), 2), dtype = int)
+		state_mapping[:,0] = [i for i in range(len(atomSet))]
+
+		for t, i in enumerate(ix_list):
+			# Find the values of the steps that match those found in the idx for a particular unique state
+			# This creates a list of len(i) where each element is a true/false ndarray as long as step_state
+      # Taking the sum reduces the output to a single binary 1D array which has 1s where the entry belongs to state t and zeros where it does not
+			# True false evaluate to zero and 1 with sum, which is exceedingly useful here
+			# Temp becomes a 1D array here with length equal to the number of steps, as expected from checking over step_state
+			temp = sum([state_mapping[:,0] == j for j in i[0]])
+			# Ensure int type to 1/0
+			temp = temp.astype(int)
+			# Pull all locations where the same state shows up
+			temp = np.where(temp == 1)
+			# Put in the unique state index for that state at those indices
+			state_mapping[temp, 1] = t
+
+		# And we also tack on the stacked next atoms
+		state_mapping = np.append(state_mapping, np.reshape(atomSet, (atomSet.shape[0],1)), axis = 1)
+
+		return state_mapping
+
+	else:
+		print("Error: Lengths of next atoms list and state dataset do not match")
+    raise InputMismatchException
+
+		return None
