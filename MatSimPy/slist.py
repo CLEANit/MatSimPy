@@ -5,43 +5,43 @@ import itertools as it
 
 # Adapted from https://stackoverflow.com/questions/497426/deleting-multiple-elements-from-a-list
 def strainer(someList, indices):
-  """
-  Takes list and extracts a sub-list containing only entries found in index list
-  Parameters:
-  * someList (list): A list object to pull a subset from
-  * indices (list): The indices of someList to keep
-  Returns:
-  * strainedList (list): someList subsampled by indices provided
-  """
-  strainedList = [i for j, i in enumerate(someList) if j not in indices]
-  return strainedList
+	"""
+ 	Takes list and extracts a sub-list containing only entries found in index list
+ 	Parameters:
+ 	* someList (list): A list object to pull a subset from
+ 	* indices (list): The indices of someList to keep
+ 	Returns:
+ 	* strainedList (list): someList subsampled by indices provided
+	"""
+	strainedList = [i for j, i in enumerate(someList) if j not in indices]
+	return strainedList
 
 def repeatedDataSampler(inList, reps, maxReps):
-  """
-  Takes a list containing len(inList)/maxReps ordered categories and subsamples reps entries from each group (Ex. For trivial case of repeated letters, [A, A, A, B, B, B...] --> [A, B...])
-  Parameters:
-  * inList (list): A list object to pull a subset from
-  * reps (int): The number of entries to extract from each sub-category in inList
-  * maxReps (int): The total number of entries in each sub-category in the input list
-  Returns:
-  * output (list): The extracted subsampled list of repeats
-  """
-  print("Input list has length {} and contains {} repeats per entry".format(len(inList), maxReps))
-  if reps > maxReps:
-    print("reps > maxReps will lead to an array out of bounds exception. Returning None")
-    return None
-  elif reps == maxReps:
-    print("reps = maxReps. Returning original inList")
-    return inList
-  else:
-    output = [inList[i:i+reps] for i in range(0, len(inList), maxReps)]
-    output = list(it.chain.from_iterable(output))
-    return output
+	"""
+	Takes a list containing len(inList)/maxReps ordered categories and subsamples reps entries from each group (Ex. For trivial case of repeated letters, [A, A, A, B, B, B...] --> [A, B...])
+	Parameters:
+	* inList (list): A list object to pull a subset from
+	* reps (int): The number of entries to extract from each sub-category in inList
+	* maxReps (int): The total number of entries in each sub-category in the input list
+	Returns:
+	* output (list): The extracted subsampled list of repeats
+	"""
+	print("Input list has length {} and contains {} repeats per entry".format(len(inList), maxReps))
+	if reps > maxReps:
+		print("reps > maxReps will lead to an array out of bounds exception. Returning None")
+		return None
+	elif reps == maxReps:
+		print("reps = maxReps. Returning original inList")
+		return inList
+	else:
+		output = [inList[i:i+reps] for i in range(0, len(inList), maxReps)]
+		output = list(it.chain.from_iterable(output))
+		return output
 
 # Taken directly from https://towardsdatascience.com/there-is-no-argmax-function-for-python-list-cd0659b05e49
 def pyargmax(l):
-  f = lambda i: l[i]
-  return max(range(len(l)), key=f)
+	f = lambda i: l[i]
+	return max(range(len(l)), key=f)
 
 # Adapted from https://stackoverflow.com/questions/14008440/how-to-extract-numbers-from-filename-in-python
 def trim_nums(string_name, num_pos = 0):
