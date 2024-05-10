@@ -255,3 +255,55 @@ def index_mapper(stateSet, tranSet, uniqueSet):
     else:
         print("Error: Lengths of next atoms list and state dataset do not match")
         raise InputMismatchException
+
+
+def ave_masker(data_times, data_other, stop, increment, readout = True):
+  """
+  This function returns the mean and standard deviation across multiple items by stepping through cumulative time and data arrays in incremental fashion.
+  
+  Inputs:
+  * data_times (list of array): List of arrays containing cumulative time data 
+  * data_other (list of array): List of arrays containing Cumulative spacial/frequency data, i.e. total transitions, diffusion, etc.
+  * stop (int): The last index for averaging over
+  * increment (int): Dictates the size of the averaging window/mask at each step
+  * readout (bool): Prints data on first few rounds of process, default True
+  Outputs:
+  * ave_data (array):
+  * sdev_data (array):
+  """
+  ave_data = []
+  sdev_data = []
+  for t in range(0, stop, increment):
+    temp = []
+    for i in range(10):
+      mask = np.where(data_times[i] <= t)
+      if len(mask[0]) != 0 and len(ave_data) <= 10 and readout:
+        print("Mask {} is {} containing {} and final entry {}".format(i+1, mask, data_other[i][mask], data_other[i][mask][-1]))
+        print(data_times[i][mask])
+
+      # Get the last/latest entry at this time mask, since we only want one entry per trajectory here
+      if len(mask[0]) != 0:
+        temp.append(data_other[i][mask][-1])
+      # Otherwise if no entries are found yet, just append a zero
+      else:
+        temp.append(0)
+
+    # Take mean and sdev for this set of results from time mask
+    ave_data.append(np.mean(temp))
+    sdev_data.append(np.std(temp))
+    
+    # Readout for feedback on first few rounds
+    if len(ave_data) <= 10 and readout:
+      print("Captures for this round include {}".format(temp))
+      print("Mean for this round is {}".format(ave_data[-1]))
+      print("Sdev for this round is {}".format(sdev_data[-1]))
+
+  return ave_data, sdev_data
+
+def nesting(nested):
+  """
+  Print out individual and cumulative lengths for items in a dict of lists
+  """  
+  print("Individual", [len(nested[n]) for n in nested])
+  print("Cumulative", np.cumsum([len(nested[n]) for n in nested]))
+  return None
