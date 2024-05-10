@@ -301,9 +301,7 @@ def ave_masker(data_times, data_other, stop, increment, readout = True):
   return ave_data, sdev_data
 
 def nesting(nested):
-  """
-  Print out individual and cumulative lengths for items in a dict of lists
-  """  
+  """Print out individual and cumulative lengths for items in a dict of lists"""  
   print("Individual", [len(nested[n]) for n in nested])
   print("Cumulative", np.cumsum([len(nested[n]) for n in nested]))
   return None
