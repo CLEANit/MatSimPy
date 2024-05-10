@@ -79,6 +79,7 @@ def graph_visual(Gin, cdict, label_string = "Type", printout = False, font = [22
     plt.show()
     return None
 
+
 def gdegree(G):
     """
     Obtains an array counting degrees of nodes present in graph G
