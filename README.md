@@ -28,7 +28,7 @@ File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feedin
 
 **Func repeatDataSampler** <br> Pull a user-defined number of samples from a list of consistently-sized ordered categories/repeats (i.e. name1, name2, name3, grade1, grade2, grade3... --> name1, grade1...).
 
-**Func index_mapper(stateSet, tranSet, uniqueSet)** <br> Takes arrays of states, chosen transition types, and unique states and returns a mapping between the states present and the unique state indices. Borrows from resource [here](#https://stackoverflow.com/questions/18927475/numpy-array-get-row-index-searching-by-a-row)
+**Func index_mapper(stateSet, tranSet, uniqueSet)** <br> Takes arrays of states, chosen transition types, and unique states and returns a mapping between the states present and the unique state indices. Borrows from resource [here](https://stackoverflow.com/questions/18927475/numpy-array-get-row-index-searching-by-a-row)
 
 ### graph.py    -->    Graph methods
 
