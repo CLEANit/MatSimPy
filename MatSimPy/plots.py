@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from io import can_opener
-from slist import merger
+from MatSimPy.io import can_opener
+from MatSimPy.slist import merger
 
 def histo_distro(userpkl, unpack = True, index_key = None, merge = False, x_label = "x", xlims = None, ylims = None, title = "title", decim = 1, scaleFac = 1, bins = 25, descriptive = False, legLab = None, line = False):
   """
