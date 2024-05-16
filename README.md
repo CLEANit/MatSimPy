@@ -48,3 +48,6 @@ File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feedin
 
 **Func composition_identifier** <br> Defines the composition of an ASE atoms object in a paired list output for chemical numbers and symbols.
 > elem_list, num_list = composition_identifier(atmObjASE)
+
+### plots.py    -->    Matplotlib & Seaborn plotting
+TBD
