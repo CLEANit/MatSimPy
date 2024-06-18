@@ -4,18 +4,24 @@ This repo stores Python functions and classes that help materials science tasks 
 
 ### io.py    -->    File Input/Output
 
-**Class CIF_CAR_ASE** <br> Used for converting CIF and Vasp (CONTCAR, POSCAR) files to the ASE atoms object representation.  It is typically used as follows, after importing a file in need of conversion.
-
+<dl>
+<dt>Class CIF_CAR_ASE</dt> 
+<dd>Used for converting CIF and Vasp (CONTCAR, POSCAR) files to the ASE atoms object representation.  It is typically used as follows, after importing a file in need of conversion.
 > extracted_CIF = CIF_CAR_ASE(file_path, "FILE_EXTENSION")<br>ASE_Extracted = extracted_CIF.convert(False)
-
 File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feeding .convert 'True' will result in an attempt by ASE to create a visualization of the converted atoms object.  Please note that at this time, only the default view mode is implemented and it will not run in Google Colab as of last check.
-
-**Func pickle_factory** <br> Creates a pickle file when given a file path (and name) string and a list object containing the information to be pickled.
+</dd>
+  
+<dt>Func pickle_factory</dt> 
+<dd>Creates a pickle file when given a file path (and name) string and a list object containing the information to be pickled.
 > pickle_factory("path/to/your/dir/file.pkl", yourData)
+</dd>
 
-**Func can_opener** <br> Unpickles pickle files when provided a file path to a valid pickle file.
+<dt>Func can_opener<\dt> 
+<dd>Unpickles pickle files when provided a file path to a valid pickle file.
 > importData = can_opener("path/to/your/dir/file.pkl")
-
+<\dd>
+</dl>
+  
 ### slist.py    -->    String and List
 
 **Func trim_nums(string_name, num_pos = 0)** <br> This allows integer values to be picked out from filenames (i.e. "\home\file_1.txt" would return [1]).  A specified integer value is used to return an integer found in the filename (i.e.  "\home\file_1_2.txt" would return [1] by default, but would return [2] if num_pos = 1).  Adapted from resource [here](https://stackoverflow.com/questions/14008440/how-to-extract-numbers-from-filename-in-python)
@@ -29,6 +35,7 @@ File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feedin
 > [A, B...]
 
 **Func index_mapper(stateSet, tranSet, uniqueSet)** <br> Takes arrays of states, chosen transition types, and unique states and returns a mapping between the states present and the unique state indices. Borrows from resource [here](https://stackoverflow.com/questions/18927475/numpy-array-get-row-index-searching-by-a-row)
+</dl>
 
 ### graph.py    -->    Graph methods
 
