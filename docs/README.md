@@ -16,7 +16,7 @@ File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feedin
 > pickle_factory("path/to/your/dir/file.pkl", yourData)
 </dd>
 
-<dt>Func can_opener<\dt> 
+<dt>Func can_opener</dt> 
 <dd>Unpickles pickle files when provided a file path to a valid pickle file.
 > importData = can_opener("path/to/your/dir/file.pkl")
 <\dd>
