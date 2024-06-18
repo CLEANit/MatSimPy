@@ -15,7 +15,7 @@ This repo stores Python functions and classes that help materials science tasks 
       extracted_CIF = CIF_CAR_ASE(file_path, "FILE_EXTENSION")<br>ASE_Extracted = extracted_CIF.convert(False)
     '''
 
-  <blockquote>
+  </blockquote>
 
 <dd>File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feeding .convert 'True' will result in an attempt by ASE to create a visualization of the converted atoms object.  Please note that at this time, only the default view mode is implemented and it will not run in Google Colab as of last check.
 </dd>
@@ -28,7 +28,7 @@ This repo stores Python functions and classes that help materials science tasks 
   pickle_factory("path/to/your/dir/file.pkl", yourData)
 '''
 
-<blockquote>
+</blockquote>
 </dd>
 <dt>Func can_opener</dt> 
 <dd>Unpickles pickle files when provided a file path to a valid pickle file.
@@ -38,7 +38,7 @@ This repo stores Python functions and classes that help materials science tasks 
 importData = can_opener("path/to/your/dir/file.pkl")
 '''
 
-<blockquote>
+</blockquote>
 <\dd>
 </dl>
   
