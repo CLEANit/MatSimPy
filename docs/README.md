@@ -4,25 +4,20 @@ This repo stores Python functions and classes that help materials science tasks 
 
 ### io.py    -->    File Input/Output
 
-<dl>
-  <dt>Class CIF_CAR_ASE</dt> 
-  <dd>Used for converting CIF and Vasp (CONTCAR, POSCAR) files to the ASE atoms object representation.  It is typically used as follows, after importing a file in 
-    need of conversion.</dd>
-  <blockquote>
-  extracted_CIF = CIF_CAR_ASE(file_path, "FILE_EXTENSION")<br>ASE_Extracted = extracted_CIF.convert(False)
-  </blockquote>
-  <dd>File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feeding .convert 'True' will result in an attempt by ASE to create a visualization
-    of the converted atoms object.  Please note that at this time, only the default view mode is implemented and it will not run in Google Colab as of last check
-  </dd>
-  <dt>Func pickle_factory</dt> 
-  <dd>Creates a pickle file when given a file path (and name) string and a list object containing the information to be pickled.
-      <blockquote>pickle_factory("path/to/your/dir/file.pkl", yourData)</blockquote>
-  </dd>
-<dt>Func can_opener</dt> 
-<dd>Unpickles pickle files when provided a file path to a valid pickle file.
-<code>importData = can_opener("path/to/your/dir/file.pkl")</code>
-<\dd>
-</dl>
+## Documentation:
+
+### io.py    -->    File Input/Output
+
+**Class CIF_CAR_ASE** <br> Used for converting CIF and Vasp (CONTCAR, POSCAR) files to the ASE atoms object representation.  It is typically used as follows, after importing a file in need of conversion.
+> extracted_CIF = CIF_CAR_ASE(file_path, "FILE_EXTENSION")<br>ASE_Extracted = extracted_CIF.convert(False)
+
+File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feeding .convert 'True' will result in an attempt by ASE to create a visualization of the converted atoms object.  Please note that at this time, only the default view mode is implemented and it will not run in Google Colab as of last check.
+
+**Func pickle_factory** <br> Creates a pickle file when given a file path (and name) string and a list object containing the information to be pickled.
+> pickle_factory("path/to/your/dir/file.pkl", yourData)
+
+**Func can_opener** <br> Unpickles pickle files when provided a file path to a valid pickle file.
+> importData = can_opener("path/to/your/dir/file.pkl")
   
 ### slist.py    -->    String and List
 
