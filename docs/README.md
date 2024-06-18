@@ -11,7 +11,7 @@ This repo stores Python functions and classes that help materials science tasks 
 
   <blockquote>
     
-    extracted_CIF = CIF_CAR_ASE(file_path, "FILE_EXTENSION")<br>ASE_Extracted = extracted_CIF.convert(False)
+   > extracted_CIF = CIF_CAR_ASE(file_path, "FILE_EXTENSION")<br>ASE_Extracted = extracted_CIF.convert(False)
 
   </blockquote>
 
@@ -23,13 +23,13 @@ This repo stores Python functions and classes that help materials science tasks 
   <dd>Creates a pickle file when given a file path (and name) string and a list object containing the information to be pickled.</dd>
     
     '''python
-      pickle_factory("path/to/your/dir/file.pkl", yourData)
+      > pickle_factory("path/to/your/dir/file.pkl", yourData)
     '''
     
 <dt>Func can_opener</dt> 
 <dd>Unpickles pickle files when provided a file path to a valid pickle file.</dd>
 
-  importData = can_opener("path/to/your/dir/file.pkl")
+  > importData = can_opener("path/to/your/dir/file.pkl")
 
 </dl>
   
