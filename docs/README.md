@@ -10,9 +10,11 @@ This repo stores Python functions and classes that help materials science tasks 
     need of conversion.</dd>
 
   <blockquote>
-    
-   > extracted_CIF = CIF_CAR_ASE(file_path, "FILE_EXTENSION")<br>ASE_Extracted = extracted_CIF.convert(False)
 
+  <code>
+  extracted_CIF = CIF_CAR_ASE(file_path, "FILE_EXTENSION")<br>ASE_Extracted = extracted_CIF.convert(False)
+  </code>
+  
   </blockquote>
 
   <dd>File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feeding .convert 'True' will result in an attempt by ASE to create a visualization
