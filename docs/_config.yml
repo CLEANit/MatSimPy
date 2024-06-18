@@ -5,6 +5,7 @@ remote_theme: carlosperate/jekyll-theme-rtd
 # Theme settings:
 site_author: C. Reimer
 repo_url: "https://github.com/CJBR-97/MatSimPy"
+edit_on_github: true
 github_docs_folder: true
 include_homepage_in_sidebar: true
 #logo: 'https://your.url/image.png'
