@@ -19,8 +19,9 @@ This repo stores Python functions and classes that help materials science tasks 
       <blockquote>pickle_factory("path/to/your/dir/file.pkl", yourData)</blockquote>
    </dd>
 <dt>Func can_opener</dt> 
-<dd>Unpickles pickle files when provided a file path to a valid pickle file.</dd>
+<dd>Unpickles pickle files when provided a file path to a valid pickle file.
 <code>importData = can_opener("path/to/your/dir/file.pkl")</code>
+  <\dd>
 </dl>
   
 ### slist.py    -->    String and List
