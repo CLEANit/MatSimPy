@@ -21,7 +21,7 @@ This repo stores Python functions and classes that help materials science tasks 
 </dd>
   
 <dt>Func pickle_factory</dt> 
-<dd>Creates a pickle file when given a file path (and name) string and a list object containing the information to be pickled.
+<dd>Creates a pickle file when given a file path (and name) string and a list object containing the information to be pickled.</dd>
 <blockquote>
   
 '''python
@@ -29,9 +29,9 @@ This repo stores Python functions and classes that help materials science tasks 
 '''
 
 </blockquote>
-</dd>
+
 <dt>Func can_opener</dt> 
-<dd>Unpickles pickle files when provided a file path to a valid pickle file.
+<dd>Unpickles pickle files when provided a file path to a valid pickle file.</dd>
 <blockquote>
   
 '''python  
@@ -39,7 +39,6 @@ importData = can_opener("path/to/your/dir/file.pkl")
 '''
 
 </blockquote>
-<\dd>
 </dl>
   
 ### slist.py    -->    String and List
