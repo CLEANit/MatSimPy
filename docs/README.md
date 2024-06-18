@@ -1,5 +1,7 @@
 This repo stores Python functions and classes that help materials science tasks with simulations.  Particularly for ASE and NetworkX, but also with VASP and (WIP) OVITO.  A number of these tools were found online and credit is given where possible.  If there are any items lacking suitable accreditation please let me know and I will correct them at once.
 
+TODO: Update syntax markdown
+
 ## Documentation:
 
 ### io.py    -->    File Input/Output
@@ -10,13 +12,14 @@ extracted_CIF = CIF_CAR_ASE(file_path, "FILE_EXTENSION")
 ASE_Extracted = extracted_CIF.convert(False)
 ```
 File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feeding .convert 'True' will result in an attempt by ASE to create a visualization of the converted atoms object.  Please note that at this time, only the default view mode is implemented and it will not run in Google Colab as of last check.
-
 **Func pickle_factory** <br> Creates a pickle file when given a file path (and name) string and a list object containing the information to be pickled.
-> pickle_factory("path/to/your/dir/file.pkl", yourData)
-
+```python
+pickle_factory("path/to/your/dir/file.pkl", yourData)
+```
 **Func can_opener** <br> Unpickles pickle files when provided a file path to a valid pickle file.
-> importData = can_opener("path/to/your/dir/file.pkl")
-  
+```python
+importData = can_opener("path/to/your/dir/file.pkl")
+```
 ### slist.py    -->    String and List
 
 **Func trim_nums(string_name, num_pos = 0)** <br> This allows integer values to be picked out from filenames (i.e. "\home\file_1.txt" would return [1]).  A specified integer value is used to return an integer found in the filename (i.e.  "\home\file_1_2.txt" would return [1] by default, but would return [2] if num_pos = 1).  Adapted from resource [here](https://stackoverflow.com/questions/14008440/how-to-extract-numbers-from-filename-in-python)
