@@ -7,7 +7,7 @@ This repo stores Python functions and classes that help materials science tasks 
 <dl>
   <dt>Class CIF_CAR_ASE</dt> 
   <dd>Used for converting CIF and Vasp (CONTCAR, POSCAR) files to the ASE atoms object representation.  It is typically used as follows, after importing a file in 
-    need of conversion.<dd>
+    need of conversion.</dd>
       
   <blockquote>
     
@@ -17,11 +17,13 @@ This repo stores Python functions and classes that help materials science tasks 
 
   </blockquote>
 
-<dd>File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feeding .convert 'True' will result in an attempt by ASE to create a visualization of the converted atoms object.  Please note that at this time, only the default view mode is implemented and it will not run in Google Colab as of last check.
-</dd>
+  <dd>File extensions in this case are CIF, CONTCAR, or POSCAR, ignoring case.  Feeding .convert 'True' will result in an attempt by ASE to create a visualization
+    of the converted atoms object.  Please note that at this time, only the default view mode is implemented and it will not run in Google Colab as of last check
+  </dd>
   
-<dt>Func pickle_factory</dt> 
+  <dt>Func pickle_factory</dt> 
 <dd>Creates a pickle file when given a file path (and name) string and a list object containing the information to be pickled.</dd>
+
 <blockquote>
   
 '''python
