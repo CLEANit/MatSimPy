@@ -3,7 +3,7 @@ title: String & List Functions
 layout: default
 filename: slist.md
 excerpt: Documentation on string and list functions.
-nav_order: 1
+nav_order: 2
 nav_exclude: false
 search_exclude: false
 ---
