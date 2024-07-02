@@ -10,8 +10,4 @@ TODO:
 * [ ] Update syntax for markdown to distinguish each function
 * [ ] Shuffle documentation from main index to designated pages
 * [ ] Update to PEP 8 standards
-      
-## Documentation:
-
-### plots.py    -->    Matplotlib & Seaborn plotting
-TBD
+* [ ] Add section heading 'Documentation' to navbar
