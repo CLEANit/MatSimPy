@@ -32,8 +32,10 @@ importData = can_opener("path/to/your/dir/file.pkl")
 **Func strainer(someList, indices)** <br> Takes someList and extracts a sub-list containing only entries found in the indices list. Useful for working with lists of objects that cannot simply be converted to numpy arrays or pandas dataframes.  Adapted from resource [here](https://stackoverflow.com/questions/497426/deleting-multiple-elements-from-a-list)
 
 **Func repeatDataSampler(inList, reps, maxReps)** <br> Take a list *inList* made of consistently-sized ordered data groupings with size *maxReps* and containing *len(inList)/maxReps* groups. This function then subsamples *reps* entries from each group
-> repeatDataSampler([A, A, A, B, B, B...], 1, 3)
-> [A, B...]
+'''python
+repeatDataSampler([A, A, A, B, B, B...], 1, 3)
+[A, B...]
+'''
 
 **Func index_mapper(stateSet, tranSet, uniqueSet)** <br> Takes arrays of states, chosen transition types, and unique states and returns a mapping between the states present and the unique state indices. Borrows from resource [here](https://stackoverflow.com/questions/18927475/numpy-array-get-row-index-searching-by-a-row)
 </dl>
