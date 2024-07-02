@@ -14,4 +14,4 @@ sticky_navigation: true
 search_enabled: true
 google_analytics_anonymize_ip: true
 hljs_style: github-gist
-prev_next_buttons_location: None
+prev_next_buttons_location: Bottom
