@@ -7,7 +7,8 @@ from ase.visualize import view
 
 # Custom error class adapted from: https://www.programiz.com/python-programming/user-defined-exception
 class VersionError(Exception):
-    """Exception raised for incompatible ASE versions detected.
+    """
+    Exception raised for incompatible ASE versions detected.
 
     Attributes:
         version -- ASE version which caused the error
