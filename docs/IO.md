@@ -53,7 +53,7 @@ Unpickles pickle files when provided a file path to a valid pickle file.
 </dl>
 
   **Parameters:**
-  * filename (string): A title for a pickle file (please include directory in title)
+  * filename (str): A title for a pickle file (please include directory in title)
   
   **Returns:**
   * Dills (n/a): An object loaded from the provided pickle file
