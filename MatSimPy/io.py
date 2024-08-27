@@ -22,11 +22,11 @@ class VersionError(Exception):
 
 
 #Creates pickle files
-def pickle_factory(File_title, Data_list):
+def pickle_factory(file_title, data_list):
   """
   Parameters:
-  * File_title (string): A title for a pickle file (please include directory in title)
-  * Data_list (list): A list of data to go into a pickle file
+  * file_title (string): A title for a pickle file (please include directory in title)
+  * data_list (list): A list of data to go into a pickle file
   Returns: None
   """
   print(File_title)
