@@ -30,15 +30,15 @@ Used for converting CIF and Vasp (CONTCAR, POSCAR) files to the ASE atoms object
   ```
 
 <dl>
-<dt>def pickle_factory(file_path, file_extension)</dt>
+<dt>def pickle_factory(file_title, data_list)</dt>
 <dd> 
 Creates a pickle file when given a file path (and name) string and a list object containing the information to be pickled.
 </dd>
 </dl>
 
   **Parameters:**
-  * File_title (str): A title for a pickle file (please include directory in title)
-  * Data_list (list): A list of data to go into a pickle file
+  * file_title (str): A title for a pickle file (please include directory in title)
+  * data_list (list): A list of data to go into a pickle file
 
   **Example:**
   ```python
