@@ -29,9 +29,9 @@ def pickle_factory(file_title, data_list):
   * data_list (list): A list of data to go into a pickle file
   Returns: None
   """
-  print(File_title)
-  f = open(File_title, 'wb')
-  pickle.dump(Data_list, f)
+  print(file_title)
+  f = open(file_title, 'wb')
+  pickle.dump(data_list, f)
   print('done pickles')
 
 # Opens pickle files
