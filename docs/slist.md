@@ -32,7 +32,7 @@ This allows integer values to be picked out from filenames.  A specified integer
   trim_nums("\home\file_1.txt")
   1
   trim_nums("\home\file_1_2.txt", num_pos = 1)
-  File has more than one number entry
+  "File has more than one number entry"
   2
   ```
 
