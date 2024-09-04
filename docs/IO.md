@@ -8,10 +8,11 @@ nav_exclude: false
 search_exclude: false
 ---
 
-### io.py    -->    File Input/Output
+# File Input/Output - io.py
 
-This page is a WIP for documentation relating to the I/O functions of MatSimPy
+This page is a WIP for documentation relating to the I/O functions of MatSimPy.
 
+## CIF_CAR_ASE
 <dl>
 <dt>class CIF_CAR_ASE(filename, filetype)</dt>
 <dd> 
@@ -29,6 +30,7 @@ Used for converting CIF and Vasp (CONTCAR, POSCAR) files to the ASE atoms object
   ASE_Extracted = extracted_CIF.convert(False)
   ```
 
+## pickle_factory 
 <dl>
 <dt>def pickle_factory(file_title, data_list)</dt>
 <dd> 
@@ -45,6 +47,7 @@ Creates a pickle file when given a file path (and name) string and a list object
   pickle_factory("path/to/your/dir/file.pkl", yourData)
   ```
 
+## can_opener
 <dl>
 <dt>def can_opener(filename)</dt>
 <dd> 
