@@ -25,12 +25,15 @@ This allows integer values to be picked out from filenames.  A specified integer
   * num_pos (int): Position of desired integer from parsed string, default 0
   
   **Returns:**
-  *  num_list[num_pos] (int): The desired integer value from the file path
+  * (int): The desired integer value from the file path
  
   **Example:**
   ```python
-  trim_nums("\home\file_1.txt") # Returns 1
-  trim_nums("\home\file_1_2.txt", num_pos = 1) # Returns 2
+  trim_nums("\home\file_1.txt")
+  1
+  trim_nums("\home\file_1_2.txt", num_pos = 1)
+  File has more than one number entry
+  2
   ```
 
 ## pyargmax
