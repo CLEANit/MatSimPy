@@ -217,11 +217,11 @@ def comp_list(string_classes, num_per, list_form = False, out_form = "int"):
 def index_mapper(stateSet, tranSet, uniqueSet):
     """
     Parameters:
-    * stateSet (array): An array containing the unique compositions of each state (row), where each column represents a particular atom type
+    * stateSet (array): An array containing the unique compositions of each state (row), where each column represents a particular type
     * tranSet (array): An array containing transition type choices corresponding to each state (row) in stateSet
     * uniqueSet (array): An array containing the composition of each state (row), where each column represents a particular atom type
-    Returns: None
-    * state_mapping (array): An array that maps each state from stateSet to a unique state index from uniqueSet and indicates the transition atom type
+    Returns: 
+    * state_mapping (array): An array that maps each state from stateSet to a unique state index from uniqueSet and indicates the transition type
     """
     if len(tranSet) == len(stateSet):
         # Store where each unique state occurs in the dataset
