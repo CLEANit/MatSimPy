@@ -24,6 +24,20 @@ Used for converting CIF and Vasp (CONTCAR, POSCAR) files to the ASE atoms object
   * filename (str): A title for a CIF or POSCAR file (please include directory in title)
   * filetype (str): A file type string, such as POSCAR, CONTCAR, or CIF (case is irrelevant)
 
+### convert
+<dl>
+<dt>def convert(check)</dt>
+<dd> 
+Creates a pickle file when given a file path (and name) string and a list object containing the information to be pickled.
+</dd>
+</dl>
+
+  **Parameters:**
+  * check (Bool): If True, returns an ASE interactive view of the atoms object (does not work in Google Collab)
+
+  **Returns:**
+  * out (ASE Atoms object): The output atom stored from the init
+
   **Example:**
   ```python
   extracted_CIF = CIF_CAR_ASE(file_path, "FILE_EXTENSION")
