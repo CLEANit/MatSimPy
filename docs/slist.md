@@ -12,11 +12,11 @@ search_exclude: false
 
 This page is a WIP for documentation relating to the string & list functions of MatSimPy.
 
-## trim_nums
+## trim_nums [^1]
 <dl>
 <dt>def trim_nums(string_name, num_pos = 0)</dt>
 <dd> 
-This allows integer values to be picked out from filenames.  A specified integer value is used as an index to return an integer found in the filepath.  Adapted from resource [here](https://stackoverflow.com/questions/14008440/how-to-extract-numbers-from-filename-in-python)
+This allows integer values to be picked out from filenames.  A specified integer value is used as an index to return an integer found in the filepath.  Adapted from resource in footnote.
 </dd>
 </dl>
 
@@ -36,11 +36,11 @@ This allows integer values to be picked out from filenames.  A specified integer
   2
   ```
 
-## pyargmax
+## pyargmax [^2]
 <dl>
 <dt>def pyargmax(l)</dt>
 <dd> 
-Find the argmax in a python list of numbers.  Adapted from resource [here](https://towardsdatascience.com/there-is-no-argmax-function-for-python-list-cd0659b05e49).
+Find the argmax in a python list of numbers.  Adapted from resource in footnote.
 </dd>
 </dl>
 
@@ -50,11 +50,11 @@ Find the argmax in a python list of numbers.  Adapted from resource [here](https
   **Returns:**
   *  (int): The index of the item with the maximum value in the list
 
-## strainer
+## strainer [^3]
 <dl>
 <dt>def strainer(someList, indices)</dt>
 <dd> 
-Takes a list and extracts a sub-list containing only entries found at the indices provided.  Useful for working with lists of objects that cannot simply be converted to numpy arrays or pandas dataframes.  Adapted from resource [here](https://stackoverflow.com/questions/497426/deleting-multiple-elements-from-a-list)
+Takes a list and extracts a sub-list containing only entries found at the indices provided.  Useful for working with lists of objects that cannot simply be converted to numpy arrays or pandas dataframes.  Adapted from resource in footnote.
 </dd>
 </dl>
 
@@ -87,11 +87,11 @@ Take a list inList made of consistently-sized ordered data groupings with size m
   ['A1', 'B1']
   ```
 
-## index_mapper
+## index_mapper [^4]
 <dl>
 <dt>def index_mapper(stateSet, tranSet, uniqueSet)</dt>
 <dd> 
-Takes arrays of states, transition types, and unique states and returns a mapping between the states present and the unique state indices. Borrows from resource [here](https://stackoverflow.com/questions/18927475/numpy-array-get-row-index-searching-by-a-row).
+Takes arrays of states, transition types, and unique states and returns a mapping between the states present and the unique state indices. Borrows from resource in footnote.
 </dd>
 </dl>
 
@@ -102,3 +102,9 @@ Takes arrays of states, transition types, and unique states and returns a mappin
   
   **Returns:**
   * state_mapping (array): An array that maps each state from stateSet to a unique state index from uniqueSet and indicates the transition type
+
+## Footnotes
+[^1]: Adapted from [link](https://stackoverflow.com/questions/14008440/how-to-extract-numbers-from-filename-in-python)
+[^2]: Adapted from [link](https://towardsdatascience.com/there-is-no-argmax-function-for-python-list-cd0659b05e49)
+[^3]: Adapted from [link](https://stackoverflow.com/questions/497426/deleting-multiple-elements-from-a-list)
+[^4]: Adapted from [link](https://stackoverflow.com/questions/18927475/numpy-array-get-row-index-searching-by-a-row)
