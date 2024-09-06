@@ -107,4 +107,4 @@ Takes arrays of states, transition types, and unique states and returns a mappin
 [^1]: Adapted from [link](https://stackoverflow.com/questions/14008440/how-to-extract-numbers-from-filename-in-python)
 [^2]: Adapted from [link](https://towardsdatascience.com/there-is-no-argmax-function-for-python-list-cd0659b05e49)
 [^3]: Adapted from [link](https://stackoverflow.com/questions/497426/deleting-multiple-elements-from-a-list)
-[^4]: Adapted from [link](https://stackoverflow.com/questions/18927475/numpy-array-get-row-index-searching-by-a-row)
+[^4]: Borrows from [link](https://stackoverflow.com/questions/18927475/numpy-array-get-row-index-searching-by-a-row)
