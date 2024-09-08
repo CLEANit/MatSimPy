@@ -23,8 +23,7 @@ def histo_distro(userpkl, unpack = True, index_key = None, merge = False, x_labe
   * ylims (tuple): 2-tuple for y-axis limits, default None
   * title (str): title of plot, default "title" 
   Outputs:
-  * ave_data (array):
-  * sdev_data (array):
+  * None
   """
   
   x = userpkl
