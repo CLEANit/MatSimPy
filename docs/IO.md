@@ -21,8 +21,8 @@ Used for converting CIF and Vasp (CONTCAR, POSCAR) files to the ASE atoms object
 </dl>
 
   **Parameters:**
-  * filename (str): A title for a CIF or POSCAR file (please include directory in title)
-  * filetype (str): A file type string, such as POSCAR, CONTCAR, or CIF (case is irrelevant)
+  * filename (str): A title for a CIF or POSCAR file (please include directory in title).
+  * filetype (str): A file type string, such as POSCAR, CONTCAR, or CIF (case is irrelevant).
 
 ### convert
 <dl>
@@ -33,10 +33,10 @@ Creates a pickle file when given a file path (and name) string and a list object
 </dl>
 
   **Parameters:**
-  * check (Bool): If True, returns an ASE interactive view of the atoms object (does not work in Google Collab)
+  * check (Bool): If True, returns an ASE interactive view of the atoms object (does not work in Google Colab).
 
   **Returns:**
-  * out (ASE Atoms object): The output atom stored from the init
+  * out (ASE Atoms object): The output atom stored from the init.
 
   **Example:**
   ```python
@@ -53,8 +53,11 @@ Creates a pickle file when given a file path (and name) string and a list object
 </dl>
 
   **Parameters:**
-  * file_title (str): A title for a pickle file (please include directory in title)
-  * data_list (list): A list of data to go into a pickle file
+  * file_title (str): A title for a pickle file (please include directory in title).
+  * data_list (list): A list of data to go into a pickle file.
+
+  **Returns**
+  * None
 
   **Example:**
   ```python
@@ -70,10 +73,10 @@ Unpickles pickle files when provided a file path to a valid pickle file.
 </dl>
 
   **Parameters:**
-  * filename (str): A title for a pickle file (please include directory in title)
+  * filename (str): A title for a pickle file (please include directory in title).
   
   **Returns:**
-  * Dills (n/a): An object loaded from the provided pickle file
+  * Dills (n/a): An object loaded from the provided pickle file.
  
   **Example:**
   ```python
