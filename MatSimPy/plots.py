@@ -7,7 +7,7 @@ def histo_distro(userpkl, unpack = True, index_key = None, merge = False, x_labe
   """
   Returns a histogram of a user-provided distribution in a variety of formats, with customizeable formatting options to display various properties of the data in a pleasing format
   
-  Inputs:
+  Parameters:
   * userpkl (pkl, list, dict, array): pkl or other file storing the input data
   * unpack (bool): unpickles the input file if in pkl format, default True
   * index_key (key): dict key for input data, default None
@@ -22,7 +22,7 @@ def histo_distro(userpkl, unpack = True, index_key = None, merge = False, x_labe
   * xlims (tuple): 2-tuple for x-axis limits, default None
   * ylims (tuple): 2-tuple for y-axis limits, default None
   * title (str): title of plot, default "title" 
-  Outputs:
+  Returns:
   * None
   """
   
