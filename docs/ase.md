@@ -12,18 +12,18 @@ search_exclude: false
 
 ## vacuum_adjust
 <dl>
-<dt>def vacuum_adjust(ASE_Extracted, remove_vac)</dt>
+<dt>def vacuum_adjust(ASE_xtract, rm_vac)</dt>
 <dd> 
 Removes a user-specified amount of vacuum from an ASE atoms object and centres the object.
 </dd>
 </dl>
 
   **Parameters:**
-  * ASE_xtract (ASE atoms object):
-  * rm_vac (float): A positive float value, the amount of vacuum to remove from the Atoms object
+  * ASE_xtract (ASE atoms object): The atoms object to adjust.
+  * rm_vac (float): A positive float value, the amount of vacuum to remove from the Atoms object.
   
   **Returns:**
-  * ASE_xtract (ASE Atoms object): the centred modified ASE atoms object
+  * ASE_xtract (ASE Atoms object): the centred and modified ASE atoms object.
 
 ## composition_identifier
 <dl>
@@ -37,7 +37,7 @@ Defines the composition of an ASE atoms object in a paired list output for chemi
   * ASE_obj (ASE atoms object): The molecule/atom to be analyzed.
   
   **Returns:**
-  * \[elem_list, num_list\] (list): Paired lists of element symbols and element #'s'
+  * \[elem_list, num_list\] (list): Paired lists of element symbols and element #'s'.
  
   **Example:**
   ```python
