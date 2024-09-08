@@ -39,9 +39,9 @@ def repeatedDataSampler(inList, reps, maxReps):
         return output
 
 # Taken directly from https://towardsdatascience.com/there-is-no-argmax-function-for-python-list-cd0659b05e49
-def pyargmax(l):
-    f = lambda i: l[i]
-    return max(range(len(l)), key=f)
+def pyargmax(ls):
+    f = lambda i: ls[i]
+    return max(range(len(ls)), key=f)
 
 # Adapted from https://stackoverflow.com/questions/14008440/how-to-extract-numbers-from-filename-in-python
 def trim_nums(string_name, num_pos = 0):
