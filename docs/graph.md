@@ -47,11 +47,11 @@ Produces a labelled matplotlib visualization of a nx graph object.
 </dl>
 
   **Parameters:**
-    * graf (nx graph): An input graph, with labelled nodes.
-    * cdict (ditc): A dict object containing int-colour combinations for each label type (i.e. {1 : "Red", 2: "Blue"}).
-    * label_string (str): A str object used to pick the visualized label type, default is "Type".
-    * printout (bool): A bool object that determines if the colour-coding is printed to the user, default is False.
-    * font (list): A list that contains the font size (int) and the font colour (str) of the user's choice, default is [22, "black"].
+  * graf (nx graph): An input graph, with labelled nodes.
+  * cdict (ditc): A dict object containing int-colour combinations for each label type (i.e. {1 : "Red", 2: "Blue"}).
+  * label_string (str): A str object used to pick the visualized label type, default is "Type".
+  * printout (bool): A bool object that determines if the colour-coding is printed to the user, default is False.
+  * font (list): A list that contains the font size (int) and the font colour (str) of the user's choice, default is [22, "black"].
   
   **Returns:**
   * None
