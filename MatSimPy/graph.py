@@ -22,7 +22,7 @@ def init_graph_from_atm(atm):
 
 # Adapted from: https://stackoverflow.com/questions/54440779/how-to-find-all-connected-subgraph-of-a-graph-in-networkx
 # This func takes in a graph and returns every CONNECTED subgraph it has
-def c_subgraph_finder(Graf):
+def c_subgraph_finder(graf):
     """
     Parameters:
     * graf (nx graph): The input graph
@@ -31,20 +31,20 @@ def c_subgraph_finder(Graf):
     """
 
     # Get the unique node IDs
-    nodeID = [nodeid[0] for nodeid in Graf.nodes.data()]
+    nodeID = [nodeid[0] for nodeid in graf.nodes.data()]
 
     # Create a dictionary to store subgraphs
     subgraphs = {}
     # Create lists for each of the possible subgraph sizes (0 is not an accepted size, so we start at 1)
-    for i in range(1, Graf.number_of_nodes() + 1):
+    for i in range(1, graf.number_of_nodes() + 1):
     subgraphs[i] = []
 
-    for nb_nodes in range(1, Graf.number_of_nodes() + 1):
-      for SA in (selected_nodes for selected_nodes in itertools.combinations(Graf, nb_nodes)):
-          if nx.is_connected(Graf.subgraph(SA)):
+    for nb_nodes in range(1, graf.number_of_nodes() + 1):
+      for SA in (selected_nodes for selected_nodes in itertools.combinations(graf, nb_nodes)):
+          if nx.is_connected(graf.subgraph(SA)):
             subgraphs[nb_nodes].append(SA)
 
-    for i in range(1, Graf.number_of_nodes() + 1):
+    for i in range(1, graf.number_of_nodes() + 1):
     for j in range(len(subgraphs[i])):
       for k in subgraphs[i][j:]:
         if subgraphs[i][j] != k:
@@ -53,11 +53,11 @@ def c_subgraph_finder(Graf):
 
     return subgraphs
     
-def graph_visual(Gin, cdict, label_string = "Type", printout = False, font = [22, "black"]):
+def graph_visual(graf, cdict, label_string = "Type", printout = False, font = [22, "black"]):
     """
     Creates a convenient visualization of the input graph for the feature classes and colours present in cdict
     Parameters:
-    * Gin (nx graph): An input graph, with labelled nodes
+    * graf (nx graph): An input graph, with labelled nodes
     * cdict (ditc): A dict object containing int-colour combinations for each label type (i.e. {1 : "Red", 2: "Blue"})
     * label_string (str): A str object used to pick the visualized label type, default is "Type" 
     * printout (bool): A bool object that determines if the colour-coding is printed to the user, default is False
@@ -66,37 +66,37 @@ def graph_visual(Gin, cdict, label_string = "Type", printout = False, font = [22
     * None
     """
     # Get type labels from the graph input
-    labels = [Gin.nodes[i][label_string] for i in Gin.nodes]
+    labels = [graf.nodes[i][label_string] for i in graf.nodes]
     clabels = [cdict[i] for i in labels]
     if printout:
         print("Showing graph colours, types, and labels")
-        print([(c, l, g) for c, l, g in zip(clabels, labels, Gin.nodes)])
-    pos = nx.spring_layout(Gin, seed=117)  # positions for all nodes
-    nx.draw_networkx_edges(Gin, pos, width=1.0, alpha=0.5)
-    nx.draw_networkx(Gin, pos, node_color = clabels, node_size = 750, with_labels = True, font_size=font[0], font_color=font[1])
+        print([(c, l, g) for c, l, g in zip(clabels, labels, graf.nodes)])
+    pos = nx.spring_layout(graf, seed=117)  # positions for all nodes
+    nx.draw_networkx_edges(graf, pos, width=1.0, alpha=0.5)
+    nx.draw_networkx(graf, pos, node_color = clabels, node_size = 750, with_labels = True, font_size=font[0], font_color=font[1])
     plt.tight_layout()
     plt.axis("off")
     plt.show()
     return None
 
 
-def gdegree(G):
+def gdegree(graf):
     """
-    Obtains an array counting degrees of nodes present in graph G
+    Obtains an array counting degrees of nodes present in graph graf
     Parameters:
-    * G (nx graph): Input graph 
+    * graf (nx graph): Input graph 
     Returns:
-    * G_count (np array): An array indicating the number of nodes with i edges in G, where i is the index of G_count
+    * g_count (np array): An array indicating the number of nodes with i edges in graf, where i is the index of g_count
     """
-    G_degree = []
+    g_degree = []
     # Degree values for an unknown graph could range from 0 to n, where n is the number of nodes in the graph
-    G_count = np.zeros((1,len(G)+1))
-    for n in list(G.nodes()):
-        G_degree.append(G.degree[n])
+    g_count = np.zeros((1,len(graf)+1))
+    for n in list(graf.nodes()):
+        g_degree.append(graf.degree[n])
     # This covers connection possibilities
-    for r in range(len(G)+1):
-        G_count[0][r] += (G_degree.count(r))
-    return G_count
+    for r in range(len(graf)+1):
+        g_count[0][r] += (g_degree.count(r))
+    return g_count
 
 
 def state_stacker(state_array, num_class, readout = True):
