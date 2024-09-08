@@ -38,14 +38,14 @@ This allows integer values to be picked out from filenames.  A specified integer
 
 ## pyargmax [^2]
 <dl>
-<dt>def pyargmax(l)</dt>
+<dt>def pyargmax(ls)</dt>
 <dd> 
 Find the argmax in a python list of numbers.  Adapted from resource in footnote.
 </dd>
 </dl>
 
   **Parameters:**
-  * l (list): A list of numbers
+  * ls (list): A list of numbers.
   
   **Returns:**
   *  (int): The index of the item with the maximum value in the list.
