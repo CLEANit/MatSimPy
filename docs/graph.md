@@ -12,7 +12,7 @@ search_exclude: false
 
 ## init_graph_from_atm
 <dl>
-<dt>def ()</dt>
+<dt>def (atm)</dt>
 <dd> 
 Initializes an unconnected, undirected graph from a provided ASE atoms object.
 </dd>
