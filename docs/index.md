@@ -4,12 +4,8 @@ title: Index
 nav_exclude: true
 ---
 
-Welcome to the MatSimPy documentation site, hosted by Github Pages. This site is a work-in-progress, I hope you enjoy it nonetheless.
+Welcome to the MatSimPy documentation site, hosted by Github Pages.
 
-This site stores Python functions and classes that help materials science tasks with simulations.  Particularly for ASE and NetworkX, but also with VASP and (WIP) OVITO.  A number of these tools were adapted from resources shared online and credit is given where possible.  If there are any items lacking suitable accreditation please let me know and I will correct them at once.
+This site stores Python functions and classes that help with materials science simulations, particularly for work involving ASE, NetworkX, VASP, and OVITO (WIP).  A number of these tools were adapted from resources shared online and credit is given where possible.  If there are any items lacking suitable attributation please let me know and I will correct them at once.
 
-
-
-Todo 06/09/2024:
-* [ ] Update syntax for markdown to distinguish each function
-* [ ] Update to PEP 8 standards
+This site continues to be updated with new functions and examples, with the most recent update on: 2024-09-09.
