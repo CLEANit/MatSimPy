@@ -1,5 +1,5 @@
 ---
-title: String & List
+title: String & List Functions
 layout: default
 filename: slist.md
 excerpt: Documentation on string and list functions.
