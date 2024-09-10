@@ -1,5 +1,5 @@
 ---
-title: Graph Functions
+title: Graphs
 layout: default
 filename: Graph.md
 excerpt: Documentation on the NetworkX graph functions of this project.
@@ -8,7 +8,7 @@ nav_exclude: false
 search_exclude: false
 ---
 
-# Graph methods - graph.py
+# NetworkX Graphs - graph.py
 
 ## init_graph_from_atm
 <dl>
