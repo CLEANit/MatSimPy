@@ -8,7 +8,7 @@ repo_url: "https://github.com/CLEANit/MatSimPy"
 edit_on_github: true
 github_docs_folder: true
 include_homepage_in_sidebar: false
-logo: 'https://github.com/CLEANit/MatSimPy/blob/main/docs/assets/images/MatSimPy_logo.png'
+logo: '/docs/assets/images/MatSimPy_logo.png'
 #site_favicon: 'https://your.url/here.ico'
 sticky_navigation: true
 search_enabled: true
