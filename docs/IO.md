@@ -16,7 +16,7 @@ This page documents MatSimPy functions related to processing file inputs, output
 <dl>
 <dt>class CIF_CAR_ASE(filename, filetype)</dt>
 <dd> 
-Used for converting CIF and Vasp (CONTCAR, POSCAR) files to the ASE atoms object representation. File extensions are CIF, CONTCAR, or POSCAR, ignoring case.  Feeding .convert 'True' will result in an attempt by ASE to create a visualization of the converted atoms object.  Please note that at this time, only the default view mode is implemented and it will not run in Google Colab as of last check.
+Used for converting CIF and Vasp (CONTCAR, POSCAR) files to the ASE atoms object representation. File extensions are CIF, CONTCAR, or POSCAR, ignoring case.  Feeding .convert 'True' will result in an attempt by ASE to create a visualization of the converted atoms object.  Please note that at this time, only the default view mode is implemented.  Viewing in Google Colab may not be supported presently, further investigation is pending.
 </dd>
 </dl>
 
