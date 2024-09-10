@@ -10,7 +10,7 @@ search_exclude: false
 
 # Plotting - plots.py
 
-This page documents MatSimPy functions relating to handling matplotlib and seaborn plots.
+This page documents MatSimPy functions for creating matplotlib and seaborn plots.
 
 ## histo_distro
 <dl>

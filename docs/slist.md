@@ -10,7 +10,7 @@ search_exclude: false
 
 # String & List - slist.py
 
-This page documents MatSimPy functions relating to handling strings & lists.
+This page documents MatSimPy functions relating to handling strings and lists.
 
 ## trim_nums [^1]
 <dl>

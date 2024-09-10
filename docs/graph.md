@@ -10,7 +10,7 @@ search_exclude: false
 
 # Graphs - graph.py
 
-This page documents MatSimPy functions that handle NetworkX graphs.
+This page documents MatSimPy functions that create and modify NetworkX graphs.
 
 ## init_graph_from_atm
 <dl>
