@@ -8,7 +8,7 @@ nav_exclude: false
 search_exclude: false
 ---
 
-# Atomic Simulation Environment (ASE) Methods - ase.py
+# Atomic Simulation Environment (ASE) - ase.py
 
 ## vacuum_adjust
 <dl>
