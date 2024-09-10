@@ -1,5 +1,5 @@
 ---
-title: Plotting Functions
+title: Plotting
 layout: default
 filename: plots.md
 excerpt: Documentation on the plt and sns functions of this project.
