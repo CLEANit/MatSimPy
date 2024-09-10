@@ -8,7 +8,7 @@ nav_exclude: false
 search_exclude: false
 ---
 
-### Graph methods - graph.py
+# Graph methods - graph.py
 
 ## init_graph_from_atm
 <dl>
