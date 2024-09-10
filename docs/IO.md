@@ -3,7 +3,7 @@ title: I/O Functions
 layout: default
 filename: IO.md
 excerpt: Documentation on the I/O functions of this project.
-nav_order: 1
+nav_order: 3
 nav_exclude: false
 search_exclude: false
 ---
