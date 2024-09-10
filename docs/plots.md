@@ -8,7 +8,7 @@ nav_exclude: false
 search_exclude: false
 ---
 
-### Matplotlib & Seaborn plotting - plots.py
+# Matplotlib & Seaborn plotting - plots.py
 
 ## histo_distro
 <dl>
