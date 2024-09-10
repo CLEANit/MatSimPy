@@ -1,5 +1,5 @@
 ---
-title: Graphs
+title: Graph Functions
 layout: default
 filename: Graph.md
 excerpt: Documentation on the NetworkX graph functions of this project.
