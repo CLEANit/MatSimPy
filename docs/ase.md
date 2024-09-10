@@ -10,6 +10,8 @@ search_exclude: false
 
 # Atomic Simulation Environment (ASE) - ase.py
 
+This page documents MatSimPy functions for modifying and analyzing ASE atoms objects.
+
 ## vacuum_adjust
 <dl>
 <dt>def vacuum_adjust(ASE_xtract, rm_vac)</dt>
