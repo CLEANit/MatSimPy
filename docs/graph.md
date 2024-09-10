@@ -8,7 +8,9 @@ nav_exclude: false
 search_exclude: false
 ---
 
-# NetworkX Graphs - graph.py
+# Graphs - graph.py
+
+This page documents MatSimPy functions that handle NetworkX graphs.
 
 ## init_graph_from_atm
 <dl>
