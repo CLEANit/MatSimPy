@@ -8,7 +8,9 @@ nav_exclude: false
 search_exclude: false
 ---
 
-# Matplotlib & Seaborn plotting - plots.py
+# Plotting - plots.py
+
+This page documents MatSimPy functions relating to handling matplotlib and seaborn plots.
 
 ## histo_distro
 <dl>
