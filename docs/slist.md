@@ -37,7 +37,7 @@ This allows integer values to be picked out from filenames.  A specified integer
   2
   ```
 
-## pyargmax [^2]
+## pyargmax
 Adapted from web resource. [^2]
 <dl>
 <dt>def pyargmax(ls)</dt>
