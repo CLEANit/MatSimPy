@@ -130,7 +130,7 @@ def chopper(big_list, cpus):
     for i in range(len(slice_caps) - 1):
         list_o_lists.append(list(index_list_thing[slice_caps[i]:slice_caps[i+1]]))
 
-    print("Distributing", Entries_wanted, "entries over", cpus, "CPUs in segments of size", b, "with remainder", Entries_wanted%cpus, "distributed across nodes")
+    print("Distributing {} entries over {} CPUs in segments of size {} with remainder {} distributed across nodes".format(Entries_wanted, cpus, b, Entries_wanted%cpus))
     print("Here are slice caps", slice_caps)
     return list_o_lists
 
