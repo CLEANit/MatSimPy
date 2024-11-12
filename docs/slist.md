@@ -12,11 +12,12 @@ search_exclude: false
 
 This page documents MatSimPy functions relating to handling strings and lists.
 
-## trim_nums [^1]
+## trim_nums
+Adapted from web resource. [^1]
 <dl>
 <dt>def trim_nums(string_name, num_pos = 0)</dt>
 <dd> 
-This allows integer values to be picked out from filenames.  A specified integer value is used as an index to return an integer found in the filepath.  Adapted from resource in footnote.
+This allows integer values to be picked out from filenames.  A specified integer value is used as an index to return an integer found in the filepath.
 </dd>
 </dl>
 
@@ -37,10 +38,11 @@ This allows integer values to be picked out from filenames.  A specified integer
   ```
 
 ## pyargmax [^2]
+Adapted from web resource. [^2]
 <dl>
 <dt>def pyargmax(ls)</dt>
 <dd> 
-Find the argmax in a python list of numbers.  Adapted from resource in footnote.
+Find the argmax in a python list of numbers.
 </dd>
 </dl>
 
@@ -50,11 +52,12 @@ Find the argmax in a python list of numbers.  Adapted from resource in footnote.
   **Returns:**
   *  (int): The index of the item with the maximum value in the list.
 
-## strainer [^3]
+## strainer
+Adapted from web resource. [^3]
 <dl>
 <dt>def strainer(someList, indices)</dt>
 <dd> 
-Takes a list and extracts a sub-list containing only entries found at the indices provided.  Useful for working with lists of objects that cannot simply be converted to numpy arrays or pandas dataframes.  Adapted from resource in footnote.
+Takes a list and extracts a sub-list containing only entries found at the indices provided.  Useful for working with lists of objects that cannot simply be converted to numpy arrays or pandas dataframes.
 </dd>
 </dl>
 
@@ -87,11 +90,12 @@ Take a list inList made of consistently-sized ordered data groupings with size m
   ['A1', 'B1']
   ```
 
-## index_mapper [^4]
+## index_mapper
+Borrows from web resource. [^4]
 <dl>
 <dt>def index_mapper(stateSet, tranSet, uniqueSet)</dt>
 <dd> 
-Takes arrays of states, transition types, and unique states and returns a mapping between the states present and the unique state indices. Borrows from resource in footnote.
+Takes arrays of states, transition types, and unique states and returns a mapping between the states present and the unique state indices.
 </dd>
 </dl>
 
