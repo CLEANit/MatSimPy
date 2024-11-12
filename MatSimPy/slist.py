@@ -90,7 +90,7 @@ def merger(seglist):
 
 # This takes in a list and the number of pool processes/cpus you want to run on
 # It produces a list of lists of indices such that you have all indices evenly distributed across each subprocessor
-def Chopper(big_list, cpus):
+def chopper(big_list, cpus):
     """
     Parameters:
     * big_list (list): A list of items
