@@ -115,14 +115,6 @@ This takes in a list and the number of pool processes/cpus you want to run on.  
 </dd>
 </dl>
 
-    """
-    Parameters:
-    * big_list (list): A list of integers corresponding to indices from a dataset
-    * cpus (int): The number of cpus/processes available to divide our big_list over
-    Returns:
-    * list_o_lists (list): The list of lists, separating big_list into equally sized chunks and distributing the remainder
-    """
-
   **Parameters:**
   * big_list (list): A list of objects to split into sublists.
   * cpus (int): The number of cpus/processes available to divide big_list over.
