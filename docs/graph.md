@@ -14,7 +14,7 @@ This page documents MatSimPy functions that create and modify NetworkX graphs.
 
 ## init_graph_from_atm
 <dl>
-<dt>def (atm)</dt>
+<dt>def init_graph_from_atm(atm)</dt>
 <dd> 
 Initializes an unconnected, undirected graph from a provided ASE atoms object.
 </dd>
