@@ -107,6 +107,30 @@ Takes arrays of states, transition types, and unique states and returns a mappin
   **Returns:**
   * state_mapping (array): An array that maps each state from stateSet to a unique state index from uniqueSet and indicates the transition type.
 
+## chopper
+<dl>
+<dt>def chopper(big_list, cpus)</dt>
+<dd> 
+This takes in a list and the number of pool processes/cpus you want to run on.  It produces a list of lists of indices such that you have all indices evenly distributed across each subprocessor.
+</dd>
+</dl>
+
+    """
+    Parameters:
+    * big_list (list): A list of integers corresponding to indices from a dataset
+    * cpus (int): The number of cpus/processes available to divide our big_list over
+    Returns:
+    * list_o_lists (list): The list of lists, separating big_list into equally sized chunks and distributing the remainder
+    """
+
+  **Parameters:**
+  * big_list (list): A list of objects to split into sublists.
+  * cpus (int): The number of cpus/processes available to divide big_list over.
+  
+  **Returns:**
+  * list_o_lists (list): A list of lists made by separating big_list across cpus sublists as evenly as possible.
+
+
 ## Footnotes
 [^1]: Adapted from [link](https://stackoverflow.com/questions/14008440/how-to-extract-numbers-from-filename-in-python)
 [^2]: Adapted from [link](https://towardsdatascience.com/there-is-no-argmax-function-for-python-list-cd0659b05e49)
