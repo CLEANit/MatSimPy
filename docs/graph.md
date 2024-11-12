@@ -26,7 +26,8 @@ Initializes an unconnected, undirected graph from a provided ASE atoms object.
   **Returns:**
   * g (nx graph object): An unconnected graph made up of the atoms in our molecule, with attributes for the number and symbol of the element for each node.
 
-## c_subgraph_finder [^1]
+## c_subgraph_finder
+Adapted from web resource. [^1]
 <dl>
 <dt>def c_subgraph_finder(graf)</dt>
 <dd> 
