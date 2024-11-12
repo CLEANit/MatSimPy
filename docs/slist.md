@@ -68,9 +68,9 @@ Takes a list and extracts a sub-list containing only entries found at the indice
   **Returns:**
   *  (list): A version of the input list containing only objects found at the indices provided.
 
-## repeatDataSampler
+## repeatedDataSampler
 <dl>
-<dt>def repeatDataSampler(inList, reps, maxReps)</dt>
+<dt>def repeatedDataSampler(inList, reps, maxReps)</dt>
 <dd> 
 Take a list inList made of consistently-sized ordered data groupings with size maxReps and containing len(inList)/maxReps groups. This function then subsamples reps entries from each group.
 </dd>
