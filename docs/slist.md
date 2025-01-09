@@ -123,8 +123,27 @@ This takes in a list and the number of pool processes/cpus you want to run on.  
   * list_o_lists (list): A list of lists made by separating big_list across cpus sublists as evenly as possible.
 
 
+## find_min_idx
+Adapted from web resource. [^5]
+<dl>
+<dt>def find_min_idx(x, n_low = 1, sym = False, two_D = True)</dt>
+<dd> 
+This function finds the minimum index/indices of a 2D matrix x with options for multiple minima, symmetric matrices, and 1D matrices.  However, it does not account for multiple identical minima, each will be returned individually.  The input matrix is deepcopied before being processed to obtain a list of minima for output.
+</dd>
+</dl>
+
+  **Parameters:**
+  * x (array): The input array, a 2D or 1D matrix.
+  * n_low (int): The number of minima to retrieve.
+  * sym (Bool): Designates a symmetric array.
+  * two_D (Bool): Designates a 2D array.
+  
+  **Returns:**
+  * minima (list): A list of index tuples where the minima were found.
+
 ## Footnotes
 [^1]: Adapted from [link](https://stackoverflow.com/questions/14008440/how-to-extract-numbers-from-filename-in-python)
 [^2]: Adapted from [link](https://towardsdatascience.com/there-is-no-argmax-function-for-python-list-cd0659b05e49)
 [^3]: Adapted from [link](https://stackoverflow.com/questions/497426/deleting-multiple-elements-from-a-list)
 [^4]: Borrows from [link](https://stackoverflow.com/questions/18927475/numpy-array-get-row-index-searching-by-a-row)
+[^5]: Adapted from [link](https://stackoverflow.com/questions/30180241/numpy-get-the-column-and-row-index-of-the-minimum-value-of-a-2d-array)
